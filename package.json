@@ -1,14 +1,32 @@
 {
   "name": "pub.css",
-  "version": "0.0.1",
-  "description": "h2 design",
+  "version": "0.0.10",
+  "description": "a public CSS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hz2/pub.css.git"
   },
   "keywords": [
     "css"
   ],
   "author": "hz2",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hz2/pub.css/issues"
+  },
+  "homepage": "https://github.com/hz2/pub.css#readme",
+  "peerDependencies": {
+    "less": "^3.13.1"
+  },
+  "devDependencies": {
+    "less": "^3.13.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
