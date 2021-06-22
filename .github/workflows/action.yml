@@ -51,6 +51,7 @@ jobs:
       with:
         push: true
         tags: |
-          ghcr.io/${{ github.repository }}:${{ steps.package-version.outputs.current-version}}
           ghcr.io/${{ github.repository_owner }}/pub_css:${{ steps.package-version.outputs.current-version}}
     - run: curl -X POST "${{ secrets.TG_URL }}" -d "chat_id=${{ secrets.TG_CHAT_ID }}&text=pub.css%20%E7%9A%84%20docker%E5%8C%85%20%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F%EF%BC%81"
+    
+    # ghcr.io/${{ github.repository }}:${{ steps.package-version.outputs.current-version}}
