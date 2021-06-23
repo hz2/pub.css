@@ -89,9 +89,9 @@ value list
 
 | class name | define | equals |
 | - | - | - |
-| `.c2` | color #222 | `color: #222;` |
-| `.bgcf8` | background color #f8f8f8 | `background-color: #f8f8f8;` |
-| `.bdcf8` | border color #f8f8f8 | `border-color: #f8f8f8` |
+| `.c2` | color | `color: #222;` |
+| `.bgcf8` | background color | `background-color: #f8f8f8;` |
+| `.bdcf8` | border color | `border-color: #f8f8f8` |
 
 </details>
 
