@@ -1,0 +1,11 @@
+// 生成字体大小 示例： .fz12 { font-size: 12px }
+@fontsizes: 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 50, 60, 70, 80;
+
+each(@fontsizes, {
+        .fz@{value} {
+            font-size: (@value * 1px);
+        }
+
+    }
+
+);
