@@ -160,7 +160,7 @@ value list
 
 value list
 ```
-@borderRadius: 2, 4, 6, 8, 10, 999;
+[2, 4, 6, 8, 10, 999];
 ```
 
 | class name | define | equals |
