@@ -1,0 +1,109 @@
+// 生成内边距外边距  示例：
+// .p5 { padding: 5px }
+// .ml10 { margin-left: 10px }
+// .mx10 { margin-left: 10px;  margin-right: 10px }
+@sizes: 0, 1, 5, 8, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 100, 150, 200;
+
+@sides: {
+    l: -left; // 左
+    r: -right; // 右
+    t: -top; // 上
+    b: -bottom; // 下
+}
+
+.gen-space(@sizes; @sides; @index) when (@index>0) {
+    .gen-space(@sizes; @sides; @index - 1);
+
+    @size : extract(@sizes, @index);
+
+    .mx@{size} {
+        margin-left: (@size * 1px);
+        margin-right: (@size * 1px);
+    }
+
+    .px@{size} {
+        padding-left: (@size * 1px);
+        padding-right: (@size * 1px);
+    }
+
+    .my@{size} {
+        margin-top: (@size * 1px);
+        margin-bottom: (@size * 1px);
+    }
+
+    .py@{size} {
+        padding-top: (@size * 1px);
+        padding-bottom: (@size * 1px);
+    }
+
+    .m@{size} {
+        margin: (@size * 1px);
+    }
+
+    .p@{size} {
+        padding: (@size * 1px);
+    }
+
+    each(@sides, .(@v, @k, @i) {
+            .m@{k}@{size} {
+                margin@{v}: (@size * 1px);
+            }
+
+            .p@{k}@{size} {
+                padding@{v}: (@size * 1px);
+            }
+
+        }
+
+    );
+
+}
+
+.gen-space(@sizes; @sides; length(@sizes));
+
+
+// 生成宽度高度 示例： .w40 { width: 40px }  .h40 { height: 40px }
+@widths: 40, 60, 50, 70, 80, 90, 100, 120, 140, 150, 160, 170, 180, 200, 220, 240, 250, 260, 270, 300, 320, 350, 400;
+
+each(@widths, {
+
+        .w@{value},
+        [class^="el-"].w@{value} {
+            width: (@value * 1px);
+        }
+
+        .h@{value} {
+            height:(@value * 1px);
+        }
+
+    }
+
+);
+
+// 生成宽度百分比 示例： .pct10 { width: 10% }
+@pcts: 10, 15, 20, 25, 33, 46, 49, 50, 60, 64, 66, 75, 80, 85, 90, 100;
+
+each(@pcts, {
+
+        .pct@{value},
+        [class^="el-"].pct@{value} {
+            width: (@value * 100% / 100);
+        }
+
+    }
+
+);
+
+
+// 生成边框圆角 示例： .bdr999 { border-radius: 999px }
+@borderRadius: 2, 4, 6, 8, 10, 999;
+
+each(@borderRadius, {
+        .bdr@{value} {
+            overflow: hidden;
+            border-radius: (@value * 1px);
+        }
+
+    }
+
+);

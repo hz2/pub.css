@@ -89,8 +89,47 @@
     font-weight: bolder;
 }
 
+a:focus,
+a:active {
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+
+}
+
 // Cursor
 
 .pointer {
     cursor: pointer;
+}
+
+
+// Form
+
+
+button {
+    cursor: pointer;
+    border-color: transparent;
+
+    &:active {
+        opacity: .75;
+    }
+
+    &:focus,
+    &:hover {
+        outline: 0;
+
+    }
+
+}
+
+
+input {
+
+    &:focus,
+    &:hover {
+        outline: 0;
+
+    }
 }

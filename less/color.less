@@ -1,0 +1,60 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: #0088ff;
+}
+
+.purple {
+    color: purple;
+}
+
+.violet {
+    color: violet;
+}
+
+.darkgreen {
+    color: darkgreen;
+}
+
+.orange {
+    color: #FF882B;
+}
+
+.yellow {
+    color: #ffee00;
+}
+
+.gray {
+    color: gray;
+}
+
+.white {
+    color: white;
+}
+
+
+
+// Sample： .c2 { color: #222 } .bgcf8 { background-color: #f8f8f8 } .bdcf8 { border: solid 1px #f8f8f8 }
+@colors: 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, e8, f0, f2, f8, fa;
+
+each(@colors, {
+        .c@{value} {
+            color: color(%("#%a%a%a", @value , @value , @value ))
+        }
+
+        .bgc@{value} {
+            background-color: color(%("#%a%a%a", @value , @value , @value ))
+        }
+
+        .bdc@{value} {
+            border-color: color(%("#%a%a%a", @value , @value , @value ))
+        }
+    }
+
+);
