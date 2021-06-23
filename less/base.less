@@ -1,3 +1,5 @@
+// Layout
+
 .flex {
     display: flex;
     justify-content: space-between;
@@ -12,12 +14,12 @@
         justify-content: center;
     }
 
-    &.end {
-        justify-content: flex-end;
-    }
-
     &.start {
         justify-content: flex-start;
+    }
+
+    &.end {
+        justify-content: flex-end;
     }
 
     &.top {
@@ -34,10 +36,61 @@
 
 }
 
-.pointer {
-    cursor: pointer;
+.block {
+    display: inline-block;
 }
 
 .inline-block {
     display: inline-block;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.auto {
+    margin: auto;
+}
+
+// Image
+
+
+.img-cover {
+    object-fit: cover;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.img-contain {
+    object-fit: contain;
+
+    img {
+        object-fit: contain;
+    }
+}
+
+// Text
+
+.center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+// Cursor
+
+.pointer {
+    cursor: pointer;
 }
