@@ -37,7 +37,7 @@ Useage：
 | class name | define | equals |
 | - | - | - |
 | `.img-cover` | image cover | `object-fit: cover;` |
-| `.img-contain` | image contain | `object-fit: covcontainer;` |
+| `.img-contain` | image contain | `object-fit: contain;` |
 
 
 ## Text
