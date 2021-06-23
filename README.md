@@ -9,7 +9,7 @@ Useage：
 
 | class name | define | equals |
 | - | - | - |
-| `.flex ` | the flex box | [display: flex;](#1flex) |
+| `.flex ` | the flex box | [display: flex;](#flex) |
 | `.flex.around` | space around| `justify-content: space-around;` |
 | `.flex.center` | center | `justify-content: center;` |
 | `.flex.start` | start | `justify-content: flex-start;` |
