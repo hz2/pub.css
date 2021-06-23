@@ -16,6 +16,14 @@
 
     @size : extract(@sizes, @index);
 
+    .m@{size} {
+        margin: (@size * 1px);
+    }
+
+    .p@{size} {
+        padding: (@size * 1px);
+    }
+
     .mx@{size} {
         margin-left: (@size * 1px);
         margin-right: (@size * 1px);
@@ -34,14 +42,6 @@
     .py@{size} {
         padding-top: (@size * 1px);
         padding-bottom: (@size * 1px);
-    }
-
-    .m@{size} {
-        margin: (@size * 1px);
-    }
-
-    .p@{size} {
-        padding: (@size * 1px);
     }
 
     each(@sides, .(@v, @k, @i) {

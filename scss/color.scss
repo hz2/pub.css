@@ -1,0 +1,56 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: #0088ff;
+}
+
+.purple {
+    color: purple;
+}
+
+.violet {
+    color: violet;
+}
+
+.darkgreen {
+    color: darkgreen;
+}
+
+.orange {
+    color: #FF882B;
+}
+
+.yellow {
+    color: #ffee00;
+}
+
+.gray {
+    color: gray;
+}
+
+.white {
+    color: white;
+}
+
+
+$colors: (1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, e8, f0, f2, f8, fa);
+
+@each $c in $colors {
+    .c#{$c} {
+        color: unquote('#'+$c+$c+$c);
+    }
+
+    .bgc#{$c} {
+        background-color: unquote('#'+$c+$c+$c);
+    }
+
+    .bdc#{$c} {
+        border-color: unquote('#'+$c+$c+$c);
+    }
+}
