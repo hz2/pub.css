@@ -5,6 +5,19 @@ English | [中文](./README.zh.md)
 
 Useage：
 
+- For Less
+
+```less
+@import '~pub.css/less/index.less';
+```
+
+- For Scss
+
+```scss
+@import '~pub.css/scss/index.scss';
+```
+
+
 ## Base
 
 <details><summary><strong>Layout</strong></summary>
@@ -70,8 +83,8 @@ Useage：
 <details><summary><strong>Color</strong></summary>
 
 value list
-```
-@colors: 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, e8, f0, f2, f8, fa;
+```js
+[1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, e8, f0, f2, f8, fa]
 ```
 
 | class name | define | equals |
@@ -87,8 +100,8 @@ value list
 <details><summary><strong>margin and padding</strong></summary>
 
 value list
-```
-@sizes: 0, 1, 5, 8, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 100, 150, 200;
+```js
+[0, 1, 5, 8, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 100, 150, 200]
 ```
 
 Abbr
@@ -114,8 +127,8 @@ Abbr
 <details><summary><strong>width and height</strong></summary>
 
 value list
-```
-@widths: 40, 60, 50, 70, 80, 90, 100, 120, 140, 150, 160, 170, 180, 200, 220, 240, 250, 260, 270, 300, 320, 350, 400;
+```js
+[40, 60, 50, 70, 80, 90, 100, 120, 140, 150, 160, 170, 180, 200, 220, 240, 250, 260, 270, 300, 320, 350, 400]
 ```
 
 Abbr
@@ -133,8 +146,8 @@ Abbr
 <details><summary><strong>width percentage</strong></summary>
 
 value list
-```
-@pcts: 10, 15, 20, 25, 33, 46, 49, 50, 60, 64, 66, 75, 80, 85, 90, 100;
+```js
+[10, 15, 20, 25, 33, 46, 49, 50, 60, 64, 66, 75, 80, 85, 90, 100]
 ```
 
 | class name | define | equals |
@@ -161,8 +174,8 @@ value list
 <details><summary><strong>font size</strong></summary>
 
 value list
-```
-@fontsizes: 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 50, 60, 70, 80;
+```js
+[12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 50, 60, 70, 80]
 ```
 
 | class name | define | equals |
