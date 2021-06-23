@@ -159,8 +159,8 @@ value list
 <details><summary><strong>border radius</strong></summary>
 
 value list
-```
-[2, 4, 6, 8, 10, 999];
+```js
+[2, 4, 6, 8, 10, 999]
 ```
 
 | class name | define | equals |
