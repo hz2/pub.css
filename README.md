@@ -17,6 +17,12 @@ Useage：
 @import '~pub.css/scss/index.scss';
 ```
 
+- css bundle
+
+```scss
+@import '~pub.css/css/index.css';
+```
+
 
 ## Base
 
