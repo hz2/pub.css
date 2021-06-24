@@ -11,6 +11,9 @@ process.chdir('./less/')
 
 const writeFile = async (data, name) => {
     try {
+        await fs.mkdir(outputpath, {
+            recursive: true
+        });
         fs.writeFile(outputpath + name.replace('less', 'css'), data, {
             encoding: 'utf8'
         });
