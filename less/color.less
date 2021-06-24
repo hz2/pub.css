@@ -56,3 +56,12 @@ each(@colors, {
     }
 
 );
+
+@grays: range(20);
+
+each(@grays, {
+    .gray@{value} {
+      color: color(hsl(0, 0%, @value / 20));
+    }
+  }
+);

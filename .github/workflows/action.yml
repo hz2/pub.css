@@ -17,7 +17,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    # - run: npm install --registry https://registry.npmjs.org
+    - run: npm install --registry https://registry.npmjs.org && npm run build
     # 发布到 npm
     - run: npm publish --access public
       env:
@@ -29,7 +29,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://npm.pkg.github.com'
         scope: 'hz2'
-    # - run: npm install
+    - run: npm install && npm run build
     - run: sed -i 's/"pub.css"/"@hz2\/pub.css"/g' package.json
     # 发布到 GitHub 包
     - run: npm publish
