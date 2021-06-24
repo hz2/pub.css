@@ -15,7 +15,7 @@ jobs:
     # 设置 .npmrc 文件以发布到 npm
     - uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm install --registry https://registry.npmjs.org && npm run build
     # 发布到 npm
@@ -26,7 +26,7 @@ jobs:
     # 设置 .npmrc 文件以发布到 GitHub 包
     - uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '16.x'
         registry-url: 'https://npm.pkg.github.com'
         scope: 'hz2'
     - run: npm install && npm run build
