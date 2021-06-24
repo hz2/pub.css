@@ -3,6 +3,8 @@ import * as fs from 'fs/promises';
 const basepath = './'
 const outputpath = '../css/'
 
+// it worked under Node.js version 16+
+
 // change dir
 
 process.chdir('./less/')
