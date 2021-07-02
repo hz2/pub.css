@@ -103,13 +103,13 @@ value list
 
 ## Space
 
-<details><summary><strong>margin and padding</strong></summary>
+<details><summary><strong>Box Space</strong> ( margin and padding ) </summary>
 
 Formal syntax
 
-> . *side* [ *direction* ] *value*
+> . *postion* [ *direction* ] *value*
 
-*side*
+*postion*
 
 - m -> margin
 - p -> padding
@@ -137,7 +137,8 @@ value list
 
 </details>
 
-<details><summary><strong>width and height</strong></summary>
+
+<details><summary><strong>Box Side</strong> ( width and height ) </summary>
 
 value list
 ```js
@@ -151,7 +152,7 @@ value list
 
 </details>
 
-<details><summary><strong>width percentage</strong></summary>
+<details><summary><strong>Width Ratio</strong> ( width percentage ) </summary>
 
 value list
 ```js
