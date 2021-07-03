@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/less.mjs",
+    "gen": "node ./scripts/generate.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
