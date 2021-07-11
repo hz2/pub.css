@@ -1,11 +1,11 @@
 {
   "name": "pub.css",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "a public CSS",
   "main": "index.js",
   "scripts": {
-    "build": "node ./scripts/less.mjs",
-    "gen": "node ./scripts/generate.mjs",
+    "build": "npm run clean && node ./scripts/build",
+    "clean": "node ./scripts/clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,6 +15,7 @@
   "keywords": [
     "css"
   ],
+  "type": "module",
   "author": "hz2",
   "license": "MIT",
   "bugs": {
