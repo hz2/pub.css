@@ -1,0 +1,148 @@
+// Partial Base
+// Layout
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &.around {
+        justify-content: space-around;
+    }
+
+    &.center {
+        justify-content: center;
+    }
+
+    &.start {
+        justify-content: flex-start;
+    }
+
+    &.end {
+        justify-content: flex-end;
+    }
+
+    &.top {
+        align-items: flex-start;
+    }
+
+    &.bottom {
+        align-items: flex-end;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+}
+
+.block {
+    display: inline-block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.auto {
+    margin: auto;
+}
+
+// Box
+
+// .border-line {
+//     border-style: solid;
+//     border-width: 1px ;
+// }
+
+// Image
+
+
+.img-cover {
+    object-fit: cover;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.img-contain {
+    object-fit: contain;
+
+    img {
+        object-fit: contain;
+    }
+}
+
+// Text
+
+.center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+a:focus,
+a:active {
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+
+}
+
+// Cursor
+
+.pointer {
+    cursor: pointer;
+}
+
+
+// Form
+
+
+button {
+    cursor: pointer;
+    user-select: none;
+    border-color: transparent;
+
+    &:active {
+        opacity: .75;
+    }
+
+    &:focus,
+    &:hover {
+        outline: 0;
+
+    }
+
+}
+
+
+input {
+
+    &:focus,
+    &:hover {
+        outline: 0;
+
+    }
+}
