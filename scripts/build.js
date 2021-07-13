@@ -10,9 +10,9 @@ const encodingUtf8 = {
     encoding: 'utf8'
 }
 
-const partialBase = await fs.readFile(new URL("../src/common/base",
+const partialBase = await fs.readFile(new URL("../src/common/base.less",
     import.meta.url), encodingUtf8)
-const partialColor = await fs.readFile(new URL("../src/common/color",
+const partialColor = await fs.readFile(new URL("../src/common/color.less",
     import.meta.url), encodingUtf8)
 
 
