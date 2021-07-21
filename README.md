@@ -23,8 +23,10 @@ Useage：
 @import '~pub.css/css/index.css';
 ```
 
+- main.js
+
 ```js
-import '~pub.css/css/index.css';
+import 'pub.css/css/index.css';
 ```
 
 
