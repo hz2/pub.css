@@ -23,6 +23,10 @@ Useage：
 @import '~pub.css/css/index.css';
 ```
 
+```js
+import '~pub.css/css/index.css';
+```
+
 
 ## Base
 
