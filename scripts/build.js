@@ -6,6 +6,21 @@ import {
 
 // it works under Node.js version 16+
 
+const encodingUtf8 = {
+    encoding: 'utf8'
+}
+
+const partialBase = await fs.readFile(new URL("../src/common/base.less",
+    import.meta.url), encodingUtf8)
+const partialColor = await fs.readFile(new URL("../src/common/color.less",
+    import.meta.url), encodingUtf8)
+
+
+const repalceList = {
+    ...valueList,
+    partialBase,
+    partialColor,
+}
 
 process.chdir('./src/')
 
@@ -31,7 +46,7 @@ const writeScss = (data, fileName) => writeFile(data, fileName, 'scss')
 
 const replaceVal = (str) => {
     const replacedText = str.replace(/[A-Za-z]+__cfg__val/g, (match) => {
-        return valueList[match.replace('__cfg__val', '')]
+        return repalceList[match.replace('__cfg__val', '')]
     })
     return replacedText
 }
@@ -50,9 +65,7 @@ const less2css = async (str, fileName) => {
 
 const readFile = async fileName => {
     try {
-        const output = await fs.readFile(fileName, {
-            encoding: 'utf8'
-        })
+        const output = await fs.readFile(fileName, encodingUtf8)
         const newVal = replaceVal(output)
         return newVal
     } catch (err) {
