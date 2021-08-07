@@ -11,7 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Update diagram
+      uses: githubocto/repo-visualizer@main
+      with:
+        output_file: "diagram.svg"
+        excluded_paths: "ignore,.github,dist,node_modules"
+    - name: Push to NPM
     # 设置 .npmrc 文件以发布到 npm
     - uses: actions/setup-node@v1
       with:

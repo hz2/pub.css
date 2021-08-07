@@ -30,6 +30,10 @@ Useage：
 import 'pub.css/css/index.css';
 ```
 
+# Repo Visualizer
+[![diagram](./diagram.svg)](./diagram.svg)
+
+
 # Document
 
 - [Document](./doc.md)
