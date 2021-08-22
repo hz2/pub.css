@@ -1,4 +1,3 @@
-![Visualization of the codebase](./images/diagram.svg)
 
 A simple CSS style toolkit that helps you build pages easily
 
@@ -31,8 +30,7 @@ import 'pub.css/css/index.css';
 ```
 
 # Repo Visualizer
-[![diagram](./diagram.svg)](./diagram.svg)
-
+![Visualization of the codebase](./diagram.svg)
 
 # Document
 
