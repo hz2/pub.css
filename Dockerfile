@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM scratch
 ARG build_mode=dev
 RUN mkdir -p /app
 COPY ./ /app
