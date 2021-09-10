@@ -14,6 +14,8 @@
 | `.flex.bottom` | bottom | `align-items: flex-end;` |
 | `.block` | display block | `display: block;` |
 | `.inline-block` | inline block | `display: inline-block;` |
+| `.grid` | display grid | `display: grid;` |
+| `.inline-grid` | inline grid | `display: inline-grid;` |
 | `.align-top` | vertical top | `vertical-align: top;` |
 | `.auto` | margin auto | `margin: auto;` |
 
