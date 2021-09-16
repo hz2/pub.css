@@ -1,0 +1,17 @@
+// 生成内边距外边距  示例：
+// .dr5 { padding: 5px }
+@times: time__cfg__val;
+
+each(@times, {
+
+        .dr@{value} {
+            transition-duration : unit(@value/1000, s);
+        }
+
+        .dl@{value} {
+            transition-duration : unit(@value/1000, s);
+        }
+
+    }
+
+);
