@@ -1,0 +1,14 @@
+// .dr500 { transition-duration: .5s }
+$times: (time__cfg__val);
+
+
+@each $t in $times {
+
+    .dr#{$t} {
+        transition-duration: unquote($t/1000+'s');
+    }
+
+    .dl#{$t} {
+        transition-delay: unquote($t/1000+'s');
+    }
+}

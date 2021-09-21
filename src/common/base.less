@@ -57,6 +57,10 @@
 
 .grid {
   display: grid;
+
+  &.center {
+    place-items: center;
+  }
 }
 
 .inline-grid {
@@ -188,4 +192,30 @@ input {
     outline: 0;
 
   }
+}
+
+// Transition
+
+.transition {
+  transition: all linear 150ms;
+}
+
+.linear {
+  transition-timing-function: linear;
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+
+.ease-in {
+  transition-timing-function: ease-in;
+}
+
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
 }
