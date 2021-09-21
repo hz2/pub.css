@@ -1,5 +1,4 @@
-// 生成内边距外边距  示例：
-// .dr5 { padding: 5px }
+// .dr500 { transition-duration: .5s }
 @times: time__cfg__val;
 
 each(@times, {
@@ -9,9 +8,8 @@ each(@times, {
         }
 
         .dl@{value} {
-            transition-duration : unit(@value/1000, s);
+            transition-delay : unit(@value/1000, s);
         }
-
     }
 
 );
