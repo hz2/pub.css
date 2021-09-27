@@ -3,7 +3,6 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/hz2/pub.css) 
 ![npm](https://img.shields.io/npm/v/pub.css) 
 ![npm](https://img.shields.io/npm/dm/pub.css) 
-![Docker Image Version](https://img.shields.io/docker/v/hzsq/pub.css) 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/hz2/pub.css) 
 ![GitHub last commit](https://img.shields.io/github/last-commit/hz2/pub.css) 
 
@@ -41,4 +40,3 @@ import 'pub.css/css/index.css';
 # Document
 
 - [Document](./doc.md)
-- [文档](./README.zh.md)

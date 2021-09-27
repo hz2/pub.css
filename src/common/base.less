@@ -198,24 +198,54 @@ input {
 
 .transition {
   transition: all linear 150ms;
+
+  &.linear {
+    transition-timing-function: linear;
+  }
+
+  &.ease {
+    transition-timing-function: ease;
+  }
+
+  &.ease-in {
+    transition-timing-function: ease-in;
+  }
+
+  &.ease-out {
+    transition-timing-function: ease-out;
+  }
+
+  &.ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
 }
 
-.linear {
-  transition-timing-function: linear;
-}
+// Border
 
-.ease {
-  transition-timing-function: ease;
-}
+.border {
+  border: 1px solid #ddd;
 
-.ease-in {
-  transition-timing-function: ease-in;
-}
+  &.dashed {
+    border-style: dashed;
+  }
 
-.ease-out {
-  transition-timing-function: ease-out;
-}
+  &.dotted {
+    border-style: dotted;
+  }
 
-.ease-in-out {
-  transition-timing-function: ease-in-out;
+  &.double {
+    border-style: double;
+  }
+
+  &.groove {
+    border-style: groove;
+  }
+
+  &.inset {
+    border-style: inset;
+  }
+
+  &.outset {
+    border-style: outset;
+  }
 }

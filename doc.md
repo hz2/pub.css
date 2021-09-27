@@ -1,7 +1,7 @@
 
-## Base
+# Base
 
-<details><summary><strong>Layout</strong></summary>
+## Layout
 
 | class name | define | equals |
 | - | - | - |
@@ -27,18 +27,14 @@
     flex-wrap: wrap;
 }
 ```
-</details>
-
-<details><summary><strong>Image</strong></summary>
+## Image
 
 | class name | define | equals |
 | - | - | - |
 | `.img-cover` | image cover | `object-fit: cover;` |
 | `.img-contain` | image contain | `object-fit: contain;` |
 
-</details>
-
-<details><summary><strong>Text</strong></summary>
+## Text
 
 | class name | define | equals |
 | - | - | - |
@@ -48,37 +44,60 @@
 | `.bold` | font weight bold | `font-weight: bold;` |
 | `.bolder` | font weight bolder | `font-weight: bolder;` |
 
-</details>
-
-<details><summary><strong>Cursor</strong></summary>
+## Cursor
 
 | class name | define | equals |
 | - | - | - |
 | `.pointer` | cursor pointer | `cursor: pointer;` |
+## Transition
 
-</details>
-
-
-## Color
-
-<details><summary><strong>Color</strong></summary>
-
-value list
-```js
-[1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, e8, f0, f2, f8, fa]
+```
+# pub.config: 
+transition-duration: `valueList.times`
+transition-delay: `valueList.times`
 ```
 
 | class name | define | equals |
 | - | - | - |
+| `.transition` | transition | `transition: all linear 150ms;` |
+| `.transition.linear` | timing-function | `transition-timing-function: linear;` |
+| `.transition.dr100` | duration | `transition-duration: 100ms;` |
+| `.transition.dl100` | delay | `transition-delay: 100ms;` |
+
+## Border
+
+```
+# pub.config: 
+border-width: `valueList.borderWidth`
+border-color: `valueList.color`
+border-radius: `valueList.borderRadius`
+```
+
+| class name | define | equals |
+| - | - | - |
+| `.border` | border | `border: 1px solid #ddd;` |
+| `.border.dotted` | border style | `border-style: dotted;` |
+| `.bdw2` | border width | `border-width: 2px;` |
+| `.bdc7` | border color | `border-color: #777;` |
+| `.bdr999` | border radius | `border-radius: 999px;` |
+
+# Color
+
+## Color
+
+```
+# pub.config: 
+color: `valueList.color`
+background-color: `valueList.color`
+```
+| class name | define | equals |
+| - | - | - |
 | `.c2` | color | `color: #222;` |
 | `.bgcf8` | background color | `background-color: #f8f8f8;` |
-| `.bdcf8` | border color | `border-color: #f8f8f8` |
 
-</details>
+# Space
 
-## Space
-
-<details><summary><strong>Box Space</strong> ( margin and padding ) </summary>
+## Box Space ( margin and padding )
 
 Formal syntax
 
@@ -98,9 +117,11 @@ Formal syntax
 - x -> left right
 - y -> top bottom
 
-value list
-```js
-[0, 1, 5, 8, 10, 15, 20, 25, 30, 40, 45, 50, 60, 70, 80, 100, 150, 200]
+*value*
+
+```
+# pub.config: 
+space: `valueList.boxSpace`
 ```
 
 | class name | define | equals |
@@ -110,14 +131,12 @@ value list
 | `.px10` | padding horizontal 10px | `padding-left: 10px; padding-right: 10px;` |
 | `.my15` | margin vertical 15px | `margin-top: 15px; margin-bottom: 15px;` |
 
-</details>
 
+## Box Side ( width and height )
 
-<details><summary><strong>Box Side</strong> ( width and height ) </summary>
-
-value list
-```js
-[40, 60, 50, 70, 80, 90, 100, 120, 140, 150, 160, 170, 180, 200, 220, 240, 250, 260, 270, 300, 320, 350, 400]
+```
+# pub.config: 
+side: `valueList.boxSide`
 ```
 
 | class name | define | equals |
@@ -125,45 +144,27 @@ value list
 | `.w100` | width | `width: 100px;` |
 | `.h60` | height | `height: 60px;` |
 
-</details>
+## Ratio ( width / height percentage ) 
 
-<details><summary><strong>Width Ratio</strong> ( width percentage ) </summary>
-
-value list
-```js
-[10, 15, 20, 25, 33, 46, 49, 50, 60, 64, 66, 75, 80, 85, 90, 100]
+```
+# pub.config: 
+ratio: `valueList.ratio`
 ```
 
 | class name | define | equals |
 | - | - | - |
 | `.pct10` | width percentage | `width: 10%;` |
+| `.hp10` | height percentage | `height: 10%;` |
 
-</details>
+# Typeset
+## font-size
 
-<details><summary><strong>border radius</strong></summary>
-
-value list
-```js
-[2, 4, 6, 8, 10, 999]
 ```
-
-| class name | define | equals |
-| - | - | - |
-| `.bdr999` | border radius | `border-radius: 999px;` |
-
-</details>
-
-## Typeset
-
-<details><summary><strong>font size</strong></summary>
-
-value list
-```js
-[12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 50, 60, 70, 80]
+# pub.config: 
+font-size: `valueList.fontSize`
 ```
 
 | class name | define | equals |
 | - | - | - |
 | `.fz12` | font size | `font-size: 12px;` |
 
-</details>
