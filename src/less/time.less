@@ -4,12 +4,27 @@
 each(@times, {
 
         .dr@{value} {
-            transition-duration : unit(@value/1000, s);
+            transition-duration : unit((@value/1000), s);
         }
 
         .dl@{value} {
-            transition-delay : unit(@value/1000, s);
+            transition-delay : unit((@value/1000), s);
         }
     }
 
 );
+
+
+// each(@times, {
+//     @val: @value/1000;
+
+//     .dr@{value} {
+//         transition-duration: ~'@{val}s';
+//     }
+
+//     .dl@{value} {
+//         transition-delay: ~'@{val}s';
+//     }
+// }
+
+// );
