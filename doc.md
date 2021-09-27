@@ -153,8 +153,8 @@ ratio: `valueList.ratio`
 
 | class name | define | equals |
 | - | - | - |
-| `.pct10` | width percentage | `width: 10%;` |
-| `.hp10` | height percentage | `height: 10%;` |
+| `.wp10` | width percentage | `width: 10%;` |
+| `.hp30` | height percentage | `height: 30%;` |
 
 # Typeset
 ## font-size
