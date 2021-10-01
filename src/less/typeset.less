@@ -1,10 +1,12 @@
+// partialTypeset__cfg__val
+
 // 生成字体大小 示例： .fz12 { font-size: 12px }
 @fontSizes: fontSize__cfg__val;
 
 each(@fontSizes, {
-        .fz@{value} {
-            font-size: (@value * 1px);
-        }
+    .fz@{value} {
+      font-size: (@value * 1px);
     }
+  }
 
 );
