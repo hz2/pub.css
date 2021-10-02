@@ -1,6 +1,4 @@
 FROM nginx
-RUN mkdir -p /app
-COPY ./ /app
-WORKDIR /app
+COPY ./ /usr/share/nginx/html
 
 EXPOSE 80
