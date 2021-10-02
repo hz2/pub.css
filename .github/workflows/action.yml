@@ -1,4 +1,4 @@
-name: Publish NPM Package
+name: NPM Package
 on:
   push:
     # tags:
@@ -43,27 +43,3 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - run: curl -X POST "${{ secrets.TG_URL }}" -d "chat_id=${{ secrets.TG_CHAT_ID }}&text=pub.css%20%E7%9A%84%20GitHub%E5%8C%85%20%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F%EF%BC%81"
-    - uses: martinbeentjes/npm-get-version-action@master
-      id: package-version
-      with:
-        path: ./
-    - name: Log in to GitHub Docker Registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: hz2
-        password: ${{ secrets.GITHUB_TOKEN }}
-    - name: Build container image
-      uses: docker/build-push-action@v2
-      with:
-        push: true
-        tags: |
-          ghcr.io/${{ github.repository_owner }}/pub_css:${{ steps.package-version.outputs.current-version}}
-    - run: curl -X POST "${{ secrets.TG_URL }}" -d "chat_id=${{ secrets.TG_CHAT_ID }}&text=pub.css%20%E7%9A%84%20docker%E5%8C%85%20%E5%8F%91%E5%B8%83%E6%88%90%E5%8A%9F%EF%BC%81"
-    - name: Login to Docker Hub
-      uses: docker/login-action@v1
-      with:
-        username: hzsq
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    # ghcr.io/${{ github.repository }}:${{ steps.package-version.outputs.current-version}}
