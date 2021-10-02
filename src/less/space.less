@@ -71,13 +71,12 @@ each(@sizes, {
 .gen-space(@sizes; @sides; length(@sizes));
 
 
-// 生成宽度高度 示例： .w40 { width: 40px }  .h40 { height: 40px }
+// .w40 { width: 40px }  .h40 { height: 40px }
 @widths: boxSide__cfg__val;
 
 each(@widths, {
 
-        .w@{value},
-        [class^="el-"].w@{value} {
+        .w@{value} {
             width: (@value * 1px);
         }
 
@@ -88,19 +87,16 @@ each(@widths, {
 
 );
 
-// 生成百分比 示例： .pct10 { width: 10% }
+// .wp10 { width: 10% }
 @pcts: ratio__cfg__val;
 
 each(@pcts, {
 
-        .pct@{value},
-        .wp@{value},
-        [class^="el-"].pct@{value} {
+        .wp@{value} {
             width: (@value * 100% / 100);
         }
 
-        .hp@{value},
-        [class^="el-"].hp@{value} {
+        .hp@{value} {
             height: (@value * 100% / 100);
         }
     }
@@ -108,7 +104,7 @@ each(@pcts, {
 );
 
 
-// 生成边框圆角 示例： .bdr999 { border-radius: 999px }
+// .bdr999 { border-radius: 999px }
 @borderRadius: borderRadius__cfg__val;
 
 each(@borderRadius, {

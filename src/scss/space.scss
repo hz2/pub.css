@@ -57,31 +57,28 @@ $sides: ("l": "-left", "r": "-right", "t": "-top", "b": "-bottom");
     }
 }
 
-// 生成宽度高度 示例： .w40 { width: 40px }  .h40 { height: 40px }
+// .w40 { width: 40px }  .h40 { height: 40px }
 
 $width: (boxSide__cfg__val);
 
-*,
-[class*='el-'] {
-    @each $w in $width {
-        &.w#{$w} {
-            width:#{$w}px;
-        }
 
-        &.h#{$w} {
-            height:#{$w}px;
-        }
+@each $w in $width {
+    .w#{$w} {
+        width:#{$w}px;
     }
 
+    .h#{$w} {
+        height:#{$w}px;
+    }
 }
 
-// 生成百分比 
+
+// .wp10 { width: 10% }
 
 $pcts: (ratio__cfg__val);
 
 @each $p in $pcts {
 
-    .pct#{$p},
     .wp#{$p} {
         width: percentage($p/100);
     }
