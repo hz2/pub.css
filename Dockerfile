@@ -1,5 +1,4 @@
-FROM alpine
-ARG build_mode=dev
+FROM nginx
 RUN mkdir -p /app
 COPY ./ /app
 WORKDIR /app
