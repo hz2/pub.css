@@ -3,6 +3,9 @@ import * as fs from 'fs/promises';
 import {
   valueList
 } from "../pub.config.js";
+import {
+  minify
+} from "./simpleMinify.js";
 
 // it works under Node.js version 16+
 
@@ -32,6 +35,9 @@ const writeFile = async (data, fileName, type) => {
     await fs.mkdir(`../${type}`, {
       recursive: true
     });
+    if (type === 'css') {
+      data = minify(data)
+    }
     fs.writeFile(`../${type}/${fileName}`, data, {
       encoding: 'utf8'
     });

@@ -1,5 +1,7 @@
 // Text
 
+// Align 
+
 .center {
   text-align: center;
 }
@@ -12,6 +14,16 @@
   text-align: right;
 }
 
+// Style
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -20,7 +32,21 @@
   font-weight: bolder;
 }
 
+// Font
+
+.code {
+  font-family: Consolas, monaco, monospace;
+}
+
+// Warp & Break
+
 .text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
   width: 100%;
@@ -58,6 +84,14 @@
   word-break: break-word;
 }
 
+
+// Cursor & Link
+
+.pointer {
+  cursor: pointer;
+}
+
+.link:focus,
 a:focus,
 a:active {
   outline: none;
