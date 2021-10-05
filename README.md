@@ -10,7 +10,9 @@
 
 A simple CSS style toolkit that helps you build pages easily
 
+# Logo:
 
+<img src="./assets/logo-v2.svg" width="120px">
 
 # Useage：
 
