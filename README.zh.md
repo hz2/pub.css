@@ -29,3 +29,20 @@ Less 中定义变量：（要求 less v4.0.0 以上 ）
 | scss | less | valueList |
 | --- | --- | --- |
 | $pub-user-time | @pub-user-time | time |
+
+
+
+全局使用：
+
+```less
+@pub-user-time: 500,1000;
+@import '~pub.css/less/index.less';
+```
+
+分文件引入：
+
+```less
+@pub-user-time: 500,1000;
+@import '~pub.css/less/time.less';
+```
+

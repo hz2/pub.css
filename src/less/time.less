@@ -1,11 +1,11 @@
 // .dr500 { transition-duration: .5s }
 
-@times: var( time__cfg__val);
+@times: time__cfg__val;
 
 @timesList: if((isdefined(@pub-user-time )), @pub-user-time , @times);
 
 each(@timesList, {
-    @val: @value/1000;
+    @val: (@value/1000);
 
     .dr@{value} {
       transition-duration: ~'@{val}s';
