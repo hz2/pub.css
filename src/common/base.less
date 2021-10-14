@@ -111,6 +111,20 @@
   }
 }
 
+.bg-cover,
+.bg-contain {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 // Form
 
 
@@ -195,4 +209,77 @@ input {
   &.outset {
     border-style: outset;
   }
+}
+
+// Outline
+
+.outline {
+  border: 1px solid #ddd;
+
+  &.dashed {
+    outline-style: dashed;
+  }
+
+  &.dotted {
+    outline-style: dotted;
+  }
+
+  &.double {
+    outline-style: double;
+  }
+
+  &.groove {
+    outline-style: groove;
+  }
+
+  &.inset {
+    outline-style: inset;
+  }
+
+  &.initial {
+    outline-style: initial;
+  }
+
+  &.outset {
+    outline-style: outset;
+  }
+
+  &.thin {
+    outline-width: thin;
+  }
+
+  &.medium {
+    outline-width: medium;
+  }
+
+  &.thick {
+    outline-width: thick;
+  }
+
+}
+
+// Postion
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z50 {
+  z-index: 50;
+}
+
+.z100 {
+  z-index: 100;
+}
+
+.z150 {
+  z-index: 150;
 }
