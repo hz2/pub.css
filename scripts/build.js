@@ -6,6 +6,7 @@ import {
 import {
   minify
 } from "./simpleMinify.js";
+import path from "path";
 
 // it works under Node.js version 16+
 
@@ -21,24 +22,26 @@ const repalceList = {
   ...valueList,
   partialBase: await readCommon('base'),
   partialColor: await readCommon('color'),
+  partialSpace: await readCommon('space'),
   partialTypeset: await readCommon('typeset'),
 }
 
+const src = path.resolve(process.cwd(), './src')
 
-process.chdir('./src/')
+process.chdir(src)
 
 
 // write file
 
 const writeFile = async (data, fileName, type) => {
   try {
-    await fs.mkdir(`../${type}`, {
+    await fs.mkdir(`../dist/${type}`, {
       recursive: true
     });
     if (type === 'css') {
       data = minify(data)
     }
-    fs.writeFile(`../${type}/${fileName}`, data, {
+    fs.writeFile(`../dist/${type}/${fileName}`, data, {
       encoding: 'utf8'
     });
   } catch (err) {
@@ -114,7 +117,8 @@ readHandle('./scss', readScss)
 // build css
 
 setTimeout(() => {
-  process.chdir('../less/')
+  const less = path.resolve(process.cwd(), '../dist/less')
+  process.chdir(less)
   const readLess2CSS = fileName => readFileHandle(fileName, './', less2css)
   readHandle('./', readLess2CSS)
 }, 1000);

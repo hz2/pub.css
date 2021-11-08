@@ -1,6 +1,6 @@
 {
   "name": "pub.css",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "a public CSS",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/hz2/pub.css#readme",
   "peerDependencies": {
-    "less": "^3.13.1"
+    "less": "^4.1.2"
   },
   "devDependencies": {
     "less": "^4.1.2"
