@@ -14,8 +14,10 @@ const encodingUtf8 = {
   encoding: 'utf8'
 }
 
+const dirc = x => path.resolve(process.cwd(), x)
+const src = dirc('./src')
 
-const readCommon = async (name) => await fs.readFile(new URL(`../src/common/${name}.less`,
+const readCommon = async (name) => await fs.readFile(new URL(`${src}/common/${name}.less`,
   import.meta.url), encodingUtf8);
 
 const repalceList = {
@@ -26,22 +28,19 @@ const repalceList = {
   partialTypeset: await readCommon('typeset'),
 }
 
-const src = path.resolve(process.cwd(), './src')
-
-process.chdir(src)
-
 
 // write file
 
 const writeFile = async (data, fileName, type) => {
+  const dist = path.resolve(process.cwd(), './dist')
   try {
-    await fs.mkdir(`../dist/${type}`, {
+    await fs.mkdir(`${dist}/${type}`, {
       recursive: true
     });
     if (type === 'css') {
       data = minify(data)
     }
-    fs.writeFile(`../dist/${type}/${fileName}`, data, {
+    fs.writeFile(`${dist}/${type}/${fileName}`, data, {
       encoding: 'utf8'
     });
   } catch (err) {
@@ -95,9 +94,9 @@ const readHandle = async (dir, fn) => {
   }
 }
 
-const readFileHandle = async (fileName, dir, fn) => {
+const readFileHandle = async (fileName, fn) => {
   try {
-    const newVal = await readFile(dir + fileName)
+    const newVal = await readFile( fileName)
     fn(newVal, fileName)
   } catch (error) {
     console.error(error);
@@ -106,19 +105,14 @@ const readFileHandle = async (fileName, dir, fn) => {
 
 // build less
 
-const readLess = fileName => readFileHandle(fileName, './less/', writeLess)
-readHandle('./less', readLess)
+readHandle(dirc('./src/dist/less'), fileName => readFileHandle(fileName, './less/', writeLess))
 
 // build scss
 
-const readScss = fileName => readFileHandle(fileName, './scss/', writeScss)
-readHandle('./scss', readScss)
+// readHandle(dirc('./src/dist/scss'), fileName => readFileHandle(fileName, './scss/', writeScss))
 
-// build css
+// // build css
 
-setTimeout(() => {
-  const less = path.resolve(process.cwd(), '../dist/less')
-  process.chdir(less)
-  const readLess2CSS = fileName => readFileHandle(fileName, './', less2css)
-  readHandle('./', readLess2CSS)
-}, 1000);
+// setTimeout(() => {
+//   readHandle(dirc('./dist/less'), fileName => readFileHandle(fileName, './', less2css))
+// }, 1000);
