@@ -69,43 +69,26 @@ const less2css = async (str, fileName) => {
   }
 }
 
-// read file
-
-const readFile = async fileName => {
-  try {
-    const output = await fs.readFile(fileName, encodingUtf8)
-    const newVal = replaceVal(output)
-    return newVal
-  } catch (err) {
-    console.error(err);
-  }
-}
-
 // read dir
 
-const readHandle = async (dir, fn) => {
+const genFile = async (type, fn) => {
   try {
-    const files = await fs.readdir(dir);
+    const input = dirc(`./src/${type}`)
+    const files = await fs.readdir(input);
     for await (const file of files) {
-      fn(file);
+      const readData = await fs.readFile(`${input}/${file}`, encodingUtf8)
+      const newVal = replaceVal(readData)
+      fn(newVal, file)
     }
   } catch (err) {
     console.error(err);
   }
 }
 
-const readFileHandle = async (fileName, fn) => {
-  try {
-    const newVal = await readFile( fileName)
-    fn(newVal, fileName)
-  } catch (error) {
-    console.error(error);
-  }
-}
 
 // build less
 
-readHandle(dirc('./src/dist/less'), fileName => readFileHandle(fileName, './less/', writeLess))
+genFile('less', writeLess)
 
 // build scss
 
