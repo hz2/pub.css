@@ -4,6 +4,4 @@ const cfg = {
     recursive: true,
     force: true
 }
-fs.rm('less', cfg);
-fs.rm('css', cfg);
-fs.rm('scss', cfg);
+fs.rm('dist', cfg);
