@@ -16,6 +16,12 @@ A simple CSS style toolkit that helps you build pages easily
 
 # Useage：
 
+- Install
+
+```bash
+npm install pub.css
+```
+
 - For Less
 
 ```less
