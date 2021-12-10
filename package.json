@@ -1,6 +1,6 @@
 {
   "name": "pub.css",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "a public CSS",
   "main": "index.js",
   "scripts": {
