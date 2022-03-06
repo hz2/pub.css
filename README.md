@@ -56,6 +56,18 @@ proxy `localhost:8012` as `/pubcss`
 <link rel="stylesheet" type="text/css" href="/pubcss/css/index.css">
 ```
 
+- CDN
+
+```html
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pub.css/css/index.css">
+```
+
+or
+
+```html
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/pub.css/css/index.css">
+```
+
 # Document
 
 - [Document](./doc.md)
