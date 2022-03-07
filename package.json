@@ -1,7 +1,7 @@
 {
   "name": "pub.css",
   "version": "0.0.32",
-  "description": "a public CSS",
+  "description": "a minimal and classful Public CSS",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && node ./scripts/build",
