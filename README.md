@@ -8,7 +8,9 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/hz2/pub.css) 
 
 
-A simple CSS style toolkit that helps you build pages easily
+A minimal and **classful** Public CSS toolkit. it helps you build pages easily
+
+💡 find the [classless](https://github.com/hz2/anak) one.
 
 # Logo:
 
