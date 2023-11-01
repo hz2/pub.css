@@ -10,3 +10,14 @@ each(@fontSizes, {
   }
 
 );
+
+// 字重
+@fontsWeights: range(9);
+
+each(@fontsWeights, {
+    .fw@{value} {
+      font-weight: @value * 100;
+    }
+  }
+
+);

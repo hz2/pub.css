@@ -84,9 +84,9 @@ each(@sizes, {
 
 
 // .w40 { width: 40px }  .h40 { height: 40px }
-@widths: boxSide__cfg__val;
+@length: boxSide__cfg__val;
 
-each(@widths, {
+each(@length, {
 
     .w@{value} {
       width: (@value * 1px);
@@ -94,6 +94,12 @@ each(@widths, {
 
     .h@{value} {
       height:(@value * 1px);
+    }
+
+    // square 正方形
+    .sq@{value} {
+      height:(@value * 1px);
+      width: (@value * 1px);
     }
   }
 
@@ -121,6 +127,11 @@ each(@pcts, {
 
 each(@borderRadius, {
     .bdr@{value} {
+      overflow: hidden;
+      border-radius: (@value * 1px);
+    }
+
+    .rd@{value} {
       overflow: hidden;
       border-radius: (@value * 1px);
     }

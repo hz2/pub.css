@@ -82,6 +82,11 @@ $width: (boxSide__cfg__val);
   .h#{$w} {
     height:#{$w}px;
   }
+
+  .sq#{$w} {
+    width:#{$w}px;
+    height:#{$w}px;
+  }
 }
 
 
@@ -107,6 +112,11 @@ $bdrs: (borderRadius__cfg__val);
 
 @each $b in $bdrs {
   .bdr#{$b} {
+    overflow: hidden;
+    border-radius:#{$b}px;
+  }
+
+  .rd#{$b} {
     overflow: hidden;
     border-radius:#{$b}px;
   }
