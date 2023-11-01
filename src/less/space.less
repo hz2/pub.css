@@ -5,66 +5,78 @@
 @sizes: boxSpace__cfg__val;
 
 each(@sizes, {
-        .m@{value} {
-            margin: (@value * 1px);
-        }
-
-        .p@{value} {
-            padding: (@value * 1px);
-        }
+    .m@{value} {
+      margin: (@value * 1px);
     }
+
+    .p@{value} {
+      padding: (@value * 1px);
+    }
+
+    .gap@{value} {
+      gap: (@value * 1px);
+    }
+
+    .row-gap@{value} {
+      row-gap: (@value * 1px);
+    }
+
+    .column-gap@{value} {
+      column-gap: (@value * 1px);
+    }
+  }
 
 );
 
 each(@sizes, {
-        .mx@{value} {
-            margin-left: (@value * 1px);
-            margin-right: (@value * 1px);
-        }
-
-        .px@{value} {
-            padding-left: (@value * 1px);
-            padding-right: (@value * 1px);
-        }
-
-        .my@{value} {
-            margin-top: (@value * 1px);
-            margin-bottom: (@value * 1px);
-        }
-
-        .py@{value} {
-            padding-top: (@value * 1px);
-            padding-bottom: (@value * 1px);
-        }
+    .mx@{value} {
+      margin-left: (@value * 1px);
+      margin-right: (@value * 1px);
     }
+
+    .px@{value} {
+      padding-left: (@value * 1px);
+      padding-right: (@value * 1px);
+    }
+
+    .my@{value} {
+      margin-top: (@value * 1px);
+      margin-bottom: (@value * 1px);
+    }
+
+    .py@{value} {
+      padding-top: (@value * 1px);
+      padding-bottom: (@value * 1px);
+    }
+  }
 
 );
 
 
 
 @sides: {
-    l: -left; // 左
-    r: -right; // 右
-    t: -top; // 上
-    b: -bottom; // 下
+  l: -left; // 左
+  r: -right; // 右
+  t: -top; // 上
+  b: -bottom; // 下
 }
 
 .gen-space(@sizes; @sides; @index) when (@index>0) {
-    .gen-space(@sizes; @sides; @index - 1);
+  .gen-space(@sizes; @sides; @index - 1);
 
-    @size : extract(@sizes, @index);
+  @size : extract(@sizes, @index);
 
-    each(@sides, .(@v, @k, @i) {
-            .m@{k}@{size} {
-                margin@{v}: (@size * 1px);
-            }
+  each(@sides, .(@v, @k, @i) {
+      .m@{k}@{size} {
+        margin@{v}: (@size * 1px);
+      }
 
-            .p@{k}@{size} {
-                padding@{v}: (@size * 1px);
-            }
-        }
+      .p@{k}@{size} {
+        padding@{v}: (@size * 1px);
+      }
+    }
 
-    );
+  );
 
 }
 
@@ -72,18 +84,24 @@ each(@sizes, {
 
 
 // .w40 { width: 40px }  .h40 { height: 40px }
-@widths: boxSide__cfg__val;
+@length: boxSide__cfg__val;
 
-each(@widths, {
+each(@length, {
 
-        .w@{value} {
-            width: (@value * 1px);
-        }
-
-        .h@{value} {
-            height:(@value * 1px);
-        }
+    .w@{value} {
+      width: (@value * 1px);
     }
+
+    .h@{value} {
+      height:(@value * 1px);
+    }
+
+    // square 正方形
+    .sq@{value} {
+      height:(@value * 1px);
+      width: (@value * 1px);
+    }
+  }
 
 );
 
@@ -92,14 +110,14 @@ each(@widths, {
 
 each(@pcts, {
 
-        .wp@{value} {
-            width: (@value * 100% / 100);
-        }
-
-        .hp@{value} {
-            height: (@value * 100% / 100);
-        }
+    .wp@{value} {
+      width: (@value * 100% / 100);
     }
+
+    .hp@{value} {
+      height: (@value * 100% / 100);
+    }
+  }
 
 );
 
@@ -108,11 +126,16 @@ each(@pcts, {
 @borderRadius: borderRadius__cfg__val;
 
 each(@borderRadius, {
-        .bdr@{value} {
-            overflow: hidden;
-            border-radius: (@value * 1px);
-        }
+    .bdr@{value} {
+      overflow: hidden;
+      border-radius: (@value * 1px);
     }
+
+    .rd@{value} {
+      overflow: hidden;
+      border-radius: (@value * 1px);
+    }
+  }
 
 );
 
@@ -120,10 +143,10 @@ each(@borderRadius, {
 @borderWidth: borderWidth__cfg__val;
 
 each(@borderWidth, {
-        .bdw@{value} {
-            border-width: (@value * 1px);
-        }
+    .bdw@{value} {
+      border-width: (@value * 1px);
     }
+  }
 
 );
 

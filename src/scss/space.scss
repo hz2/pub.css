@@ -9,52 +9,64 @@ $sides: ("l": "-left", "r": "-right", "t": "-top", "b": "-bottom");
 
 @each $size in $sizes {
 
-    .m#{$size} {
-        margin:#{$size}px;
-    }
+  .m#{$size} {
+    margin:#{$size}px;
+  }
 
-    .p#{$size} {
-        padding:#{$size}px;
-    }
+  .p#{$size} {
+    padding:#{$size}px;
+  }
+
+  .gap#{$size} {
+    gap:#{$size}px;
+  }
+
+  .column-gap#{$size} {
+    column-gap:#{$size}px;
+  }
+
+  .column-gap#{$size} {
+    column-gap:#{$size}px;
+  }
 }
 
 @each $size in $sizes {
 
-    .mx#{$size} {
-        margin-left:#{$size}px;
-        margin-right:#{$size}px;
-    }
+  .mx#{$size} {
+    margin-left:#{$size}px;
+    margin-right:#{$size}px;
+  }
 
-    .px#{$size} {
-        padding-left:#{$size}px;
-        padding-right:#{$size}px;
-    }
+  .px#{$size} {
+    padding-left:#{$size}px;
+    padding-right:#{$size}px;
+  }
 
-    .my#{$size} {
-        margin-top:#{$size}px;
-        margin-bottom:#{$size}px;
-    }
+  .my#{$size} {
+    margin-top:#{$size}px;
+    margin-bottom:#{$size}px;
+  }
 
-    .py#{$size} {
-        padding-top:#{$size}px;
-        padding-bottom:#{$size}px;
-    }
+  .py#{$size} {
+    padding-top:#{$size}px;
+    padding-bottom:#{$size}px;
+  }
 }
 
 @each $size in $sizes {
 
-    @each $s,
-    $side in $sides {
+  @each $s,
+  $side in $sides {
 
-        .m#{$s}#{$size} {
-            margin#{$side}:#{$size}px;
-        }
-
-        .p#{$s}#{$size} {
-            padding#{$side}:#{$size}px;
-        }
-
+    .m#{$s}#{$size} {
+      margin#{$side}:#{$size}px;
     }
+
+    .p#{$s}#{$size} {
+      padding#{$side}:#{$size}px;
+    }
+
+  }
 }
 
 // .w40 { width: 40px }  .h40 { height: 40px }
@@ -63,13 +75,18 @@ $width: (boxSide__cfg__val);
 
 
 @each $w in $width {
-    .w#{$w} {
-        width:#{$w}px;
-    }
+  .w#{$w} {
+    width:#{$w}px;
+  }
 
-    .h#{$w} {
-        height:#{$w}px;
-    }
+  .h#{$w} {
+    height:#{$w}px;
+  }
+
+  .sq#{$w} {
+    width:#{$w}px;
+    height:#{$w}px;
+  }
 }
 
 
@@ -79,13 +96,13 @@ $pcts: (ratio__cfg__val);
 
 @each $p in $pcts {
 
-    .wp#{$p} {
-        width: percentage($p/100);
-    }
+  .wp#{$p} {
+    width: percentage($p/100);
+  }
 
-    .hp#{$p} {
-        height: percentage($p/100);
-    }
+  .hp#{$p} {
+    height: percentage($p/100);
+  }
 }
 
 
@@ -94,10 +111,15 @@ $pcts: (ratio__cfg__val);
 $bdrs: (borderRadius__cfg__val);
 
 @each $b in $bdrs {
-    .bdr#{$b} {
-        overflow: hidden;
-        border-radius:#{$b}px;
-    }
+  .bdr#{$b} {
+    overflow: hidden;
+    border-radius:#{$b}px;
+  }
+
+  .rd#{$b} {
+    overflow: hidden;
+    border-radius:#{$b}px;
+  }
 }
 
 // .bdw2 { border-width: 2px }
@@ -105,9 +127,9 @@ $bdrs: (borderRadius__cfg__val);
 $bdws: (borderWidth__cfg__val);
 
 @each $b in $bdws {
-    .bdw#{$b} {
-        border-width:#{$b}px;
-    }
+  .bdw#{$b} {
+    border-width:#{$b}px;
+  }
 }
 
 

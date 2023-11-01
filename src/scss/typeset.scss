@@ -7,3 +7,11 @@ $fontSizes: (fontSize__cfg__val);
     font-size:#{$f}px;
   }
 }
+
+
+// 字重
+@for $i from 1 through 9 {
+  .fw#{$i} {
+    font-weight: $i * 100;
+  }
+}
