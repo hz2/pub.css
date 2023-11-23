@@ -1,5 +1,9 @@
 # Base
 
+## Base
+
+<details><summary><strong>Layout</strong></summary>
+
 ## Layout
 
 | class name      | define        | equals                           |
@@ -11,6 +15,8 @@
 | `.flex.end`     | end           | `justify-content: flex-end;`     |
 | `.flex.top`     | top           | `align-items: flex-start;`       |
 | `.flex.bottom`  | bottom        | `align-items: flex-end;`         |
+| `.grid`         | display grid  | `display: grid;`                 |
+| `.inline-grid`  | inline grid   | `display: inline-grid;`          |
 | `.block`        | display block | `display: block;`                |
 | `.inline-block` | inline block  | `display: inline-block;`         |
 | `.align-top`    | vertical top  | `vertical-align: top;`           |
