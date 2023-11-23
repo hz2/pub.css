@@ -1,7 +1,7 @@
 {
   "name": "pub.css",
-  "version": "0.0.22",
-  "description": "a public CSS",
+  "version": "0.0.36",
+  "description": "a minimal and classful Public CSS",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && node ./scripts/build",
@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/hz2/pub.css#readme",
   "peerDependencies": {
-    "less": "^3.13.1"
+    "less": "^4.1.2"
   },
   "devDependencies": {
-    "less": "^3.13.1"
+    "less": "^4.1.2"
   },
   "browserslist": [
     "> 1%",

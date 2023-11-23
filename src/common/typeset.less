@@ -1,0 +1,123 @@
+// Text
+
+// Align 
+
+.center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Style
+
+.underline {
+  text-decoration: underline;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+// Font
+
+.code {
+  font-family: var(--pub-code-font, Consolas, monaco, monospace);
+}
+
+// Warp & Break
+
+.ellipsis,
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.text-two-lines {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.text-three-lines {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.text-transparent {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.text-pre {
+  white-space: pre;
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+.pre-line {
+  white-space: pre-line;
+}
+
+.break-spaces {
+  white-space: break-spaces;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.keep-all {
+  word-break: keep-all;
+}
+
+.break-word {
+  word-break: break-word;
+}
+
+
+// Cursor & Link
+
+.pointer {
+  cursor: pointer;
+}
+
+.link:focus,
+a:focus,
+a:active {
+  outline: none;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+
+}

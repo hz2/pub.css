@@ -1,7 +1,4 @@
-FROM scratch
-ARG build_mode=dev
-RUN mkdir -p /app
-COPY ./ /app
-WORKDIR /app
+FROM nginx:alpine
+COPY ./dist/ /usr/share/nginx/html
 
 EXPOSE 80

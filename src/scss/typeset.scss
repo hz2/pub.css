@@ -1,7 +1,17 @@
+// partialTypeset__cfg__val
+
 $fontSizes: (fontSize__cfg__val);
 
 @each $f in $fontSizes {
-    .fz#{$f} {
-        font-size:#{$f}px;
-    }
+  .fz#{$f} {
+    font-size:#{$f}px;
+  }
+}
+
+
+// 字重
+@for $i from 1 through 9 {
+  .fw#{$i} {
+    font-weight: $i * 100;
+  }
 }

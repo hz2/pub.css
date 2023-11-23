@@ -3,70 +3,94 @@
 
 .flex,
 .inline-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 
-    &.around {
-        justify-content: space-around;
-    }
+  &.around {
+    justify-content: space-around;
+  }
 
-    &.center {
-        justify-content: center;
-    }
+  &.center {
+    justify-content: center;
+  }
 
-    &.start {
-        justify-content: flex-start;
-    }
+  &.start {
+    justify-content: flex-start;
+  }
 
-    &.end {
-        justify-content: flex-end;
-    }
+  &.end {
+    justify-content: flex-end;
+  }
 
-    &.top {
-        align-items: flex-start;
-    }
+  &.top {
+    align-items: flex-start;
+  }
 
-    &.bottom {
-        align-items: flex-end;
-    }
+  &.bottom {
+    align-items: flex-end;
+  }
 
-    &.column {
-        flex-direction: column;
-    }
+  &.column {
+    flex-direction: column;
+  }
+
+  &.column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  &.row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &.nowrap {
+    flex-wrap: nowrap;
+  }
+
+  >.grow {
+    flex-grow: 1;
+  }
+
+  >.shrink {
+    flex-shrink: 1;
+  }
 
 }
 
 .inline-flex {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 
 .grid {
-    display: grid;
+  display: grid;
+
+  &.center {
+    place-items: center;
+  }
 }
 
 .inline-grid {
-    display: inline-grid;
+  display: inline-grid;
 }
 
 .block {
-    display: block;
+  display: block;
 }
 
-.inline ,
+.inline,
 .inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 
 .align-top {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .auto {
-    margin: auto;
+  margin: auto;
 }
 
 // Box
@@ -76,89 +100,204 @@
 //     border-width: 1px ;
 // }
 
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+
+
 // Image
 
 
 .img-cover {
-    object-fit: cover;
+  object-fit: cover;
 
-    img {
-        object-fit: cover;
-    }
+  img {
+    object-fit: cover;
+  }
 }
 
 .img-contain {
+  object-fit: contain;
+
+  img {
     object-fit: contain;
-
-    img {
-        object-fit: contain;
-    }
+  }
 }
 
-// Text
-
-.center {
-    text-align: center;
+.bg-cover,
+.bg-contain {
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
-.text-left {
-    text-align: left;
+.bg-contain {
+  background-size: contain;
 }
 
-.text-right {
-    text-align: right;
+.bg-cover {
+  background-size: cover;
 }
-
-.bold {
-    font-weight: bold;
-}
-
-.bolder {
-    font-weight: bolder;
-}
-
-a:focus,
-a:active {
-    outline: none;
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-
-}
-
-// Cursor
-
-.pointer {
-    cursor: pointer;
-}
-
 
 // Form
 
 
 button {
-    cursor: pointer;
-    user-select: none;
-    border-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  border-color: transparent;
 
-    &:active {
-        opacity: .75;
-    }
+  &:active {
+    opacity: .75;
+  }
 
-    &:focus,
-    &:hover {
-        outline: 0;
+  &:focus,
+  &:hover {
+    outline: 0;
 
-    }
+  }
 
 }
 
 
 input {
 
-    &:focus,
-    &:hover {
-        outline: 0;
+  &:focus,
+  &:hover {
+    outline: 0;
 
-    }
+  }
+}
+
+// Transition
+
+.transition {
+  transition: all linear 150ms;
+
+  &.linear {
+    transition-timing-function: linear;
+  }
+
+  &.ease {
+    transition-timing-function: ease;
+  }
+
+  &.ease-in {
+    transition-timing-function: ease-in;
+  }
+
+  &.ease-out {
+    transition-timing-function: ease-out;
+  }
+
+  &.ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+}
+
+// Border
+
+.border {
+  border: 1px solid #ddd;
+
+  &.dashed {
+    border-style: dashed;
+  }
+
+  &.dotted {
+    border-style: dotted;
+  }
+
+  &.double {
+    border-style: double;
+  }
+
+  &.groove {
+    border-style: groove;
+  }
+
+  &.inset {
+    border-style: inset;
+  }
+
+  &.outset {
+    border-style: outset;
+  }
+}
+
+// Outline
+
+.outline {
+  border: 1px solid #ddd;
+
+  &.dashed {
+    outline-style: dashed;
+  }
+
+  &.dotted {
+    outline-style: dotted;
+  }
+
+  &.double {
+    outline-style: double;
+  }
+
+  &.groove {
+    outline-style: groove;
+  }
+
+  &.inset {
+    outline-style: inset;
+  }
+
+  &.initial {
+    outline-style: initial;
+  }
+
+  &.outset {
+    outline-style: outset;
+  }
+
+  &.thin {
+    outline-width: thin;
+  }
+
+  &.medium {
+    outline-width: medium;
+  }
+
+  &.thick {
+    outline-width: thick;
+  }
+
+}
+
+// Postion
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z0 {
+  z-index: 0;
+}
+
+.z50 {
+  z-index: 50;
+}
+
+.z100 {
+  z-index: 100;
+}
+
+.z150 {
+  z-index: 150;
 }
